@@ -23,20 +23,20 @@ namespace Wampus_Warriors {
             StartBtn.Size = ButtonLocation;
             HighScoreBtn.Size = ButtonLocation;
             SettingsBtn.Size = ButtonLocation;
-            ControlsBtn.Size = ButtonLocation;
+            ExitBtn.Size = ButtonLocation;
 
             StartBtn.Location = new Point((int)(this.Location.X + this.ClientSize.Width * 0.25 - ButtonLocation.Width/2), (int)(this.Location.Y + this.Height * 0.25 - ButtonLocation.Height/2));
             HighScoreBtn.Location = new Point((int)(this.Location.X + this.ClientSize.Width * 0.75 - ButtonLocation.Width/2), (int)(this.Location.Y + this.Height * 0.25 - ButtonLocation.Height/2));
             SettingsBtn.Location = new Point((int)(this.Location.X + this.ClientSize.Width * 0.25 - ButtonLocation.Width / 2), (int)(this.Location.Y + this.Height * 0.75 - ButtonLocation.Height / 2));
-            ControlsBtn.Location = new Point((int)(this.Location.X + this.ClientSize.Width * 0.75 - ButtonLocation.Width / 2), (int)(this.Location.Y + this.Height * 0.75 - ButtonLocation.Height / 2));
+            ExitBtn.Location = new Point((int)(this.Location.X + this.ClientSize.Width * 0.75 - ButtonLocation.Width / 2), (int)(this.Location.Y + this.Height * 0.75 - ButtonLocation.Height / 2));
         }
 
         private void StartGame() {
             StartBtn.Visible = false;
             StartBtn.Enabled = false;
 
-            ControlsBtn.Visible = false;
-            ControlsBtn.Enabled = false;
+            ExitBtn.Visible = false;
+            ExitBtn.Enabled = false;
 
             SettingsBtn.Visible = false;
             SettingsBtn.Enabled = false;
@@ -54,13 +54,14 @@ namespace Wampus_Warriors {
         private void UpdateScreen(object sender, EventArgs e) {
             Game_Canvas.Invalidate();
         }
-        private void Game_Canvas_Click(object sender, EventArgs e) {
-            StartGame();
-        }
+
 
         private void Wampus_Warriors_SizeChanged(Object sender, EventArgs e) {
             gameSetUp();
         }
 
+        private void StartBtn_Click(object sender, EventArgs e) {
+            StartGame();
+        }
     }
 }

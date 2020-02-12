@@ -28,7 +28,7 @@
             this.StartBtn = new System.Windows.Forms.Button();
             this.HighScoreBtn = new System.Windows.Forms.Button();
             this.SettingsBtn = new System.Windows.Forms.Button();
-            this.ControlsBtn = new System.Windows.Forms.Button();
+            this.ExitBtn = new System.Windows.Forms.Button();
             this.GameTimer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.Game_Canvas)).BeginInit();
             this.SuspendLayout();
@@ -41,7 +41,6 @@
             this.Game_Canvas.Size = new System.Drawing.Size(640, 480);
             this.Game_Canvas.TabIndex = 0;
             this.Game_Canvas.TabStop = false;
-            this.Game_Canvas.Click += new System.EventHandler(this.Game_Canvas_Click);
             // 
             // StartBtn
             // 
@@ -51,6 +50,7 @@
             this.StartBtn.TabIndex = 1;
             this.StartBtn.Text = "Start Game";
             this.StartBtn.UseVisualStyleBackColor = true;
+            this.StartBtn.Click += new System.EventHandler(this.StartBtn_Click);
             // 
             // HighScoreBtn
             // 
@@ -58,7 +58,7 @@
             this.HighScoreBtn.Name = "HighScoreBtn";
             this.HighScoreBtn.Size = new System.Drawing.Size(97, 34);
             this.HighScoreBtn.TabIndex = 2;
-            this.HighScoreBtn.Text = "button2";
+            this.HighScoreBtn.Text = "High Scores";
             this.HighScoreBtn.UseVisualStyleBackColor = true;
             // 
             // SettingsBtn
@@ -70,21 +70,21 @@
             this.SettingsBtn.Text = "Settings";
             this.SettingsBtn.UseVisualStyleBackColor = true;
             // 
-            // ControlsBtn
+            // ExitBtn
             // 
-            this.ControlsBtn.Location = new System.Drawing.Point(472, 307);
-            this.ControlsBtn.Name = "ControlsBtn";
-            this.ControlsBtn.Size = new System.Drawing.Size(107, 35);
-            this.ControlsBtn.TabIndex = 4;
-            this.ControlsBtn.Text = "Controls";
-            this.ControlsBtn.UseVisualStyleBackColor = true;
+            this.ExitBtn.Location = new System.Drawing.Point(472, 307);
+            this.ExitBtn.Name = "ExitBtn";
+            this.ExitBtn.Size = new System.Drawing.Size(107, 35);
+            this.ExitBtn.TabIndex = 4;
+            this.ExitBtn.Text = "Exit Game";
+            this.ExitBtn.UseVisualStyleBackColor = true;
             // 
             // Wampus_Warriors
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(640, 480);
-            this.Controls.Add(this.ControlsBtn);
+            this.Controls.Add(this.ExitBtn);
             this.Controls.Add(this.SettingsBtn);
             this.Controls.Add(this.HighScoreBtn);
             this.Controls.Add(this.StartBtn);
@@ -103,7 +103,7 @@
         private System.Windows.Forms.Button StartBtn;
         private System.Windows.Forms.Button HighScoreBtn;
         private System.Windows.Forms.Button SettingsBtn;
-        private System.Windows.Forms.Button ControlsBtn;
+        private System.Windows.Forms.Button ExitBtn;
         private System.Windows.Forms.Timer GameTimer;
     }
 }
