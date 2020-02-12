@@ -12,7 +12,7 @@ namespace Wampus_Warriors {
     public partial class Wampus_Warriors : Form {
         public Wampus_Warriors() {
             InitializeComponent();
-
+            gameSetUp();
         }
 
         public void gameSetUp() {
