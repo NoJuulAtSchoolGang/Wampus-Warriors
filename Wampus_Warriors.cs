@@ -12,6 +12,15 @@ namespace Wampus_Warriors {
     public partial class Wampus_Warriors : Form {
         public Wampus_Warriors() {
             InitializeComponent();
+
         }
+
+        public void gameSetUp() {
+            Game_Canvas.Size = this.ClientSize;
+
+        }
+
+      
+
     }
 }
