@@ -23,11 +23,13 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
+            this.components = new System.ComponentModel.Container();
             this.Game_Canvas = new System.Windows.Forms.PictureBox();
             this.StartBtn = new System.Windows.Forms.Button();
             this.HighScoreBtn = new System.Windows.Forms.Button();
             this.SettingsBtn = new System.Windows.Forms.Button();
             this.ControlsBtn = new System.Windows.Forms.Button();
+            this.GameTimer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.Game_Canvas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -39,6 +41,7 @@
             this.Game_Canvas.Size = new System.Drawing.Size(640, 480);
             this.Game_Canvas.TabIndex = 0;
             this.Game_Canvas.TabStop = false;
+            this.Game_Canvas.Click += new System.EventHandler(this.Game_Canvas_Click);
             // 
             // StartBtn
             // 
@@ -60,7 +63,7 @@
             // 
             // SettingsBtn
             // 
-            this.SettingsBtn.Location = new System.Drawing.Point(87, 307);
+            this.SettingsBtn.Location = new System.Drawing.Point(78, 307);
             this.SettingsBtn.Name = "SettingsBtn";
             this.SettingsBtn.Size = new System.Drawing.Size(106, 35);
             this.SettingsBtn.TabIndex = 3;
@@ -88,6 +91,7 @@
             this.Controls.Add(this.Game_Canvas);
             this.Name = "Wampus_Warriors";
             this.Text = "Wampus Warriors";
+            this.SizeChanged += new System.EventHandler(this.Wampus_Warriors_SizeChanged);
             ((System.ComponentModel.ISupportInitialize)(this.Game_Canvas)).EndInit();
             this.ResumeLayout(false);
 
@@ -100,6 +104,7 @@
         private System.Windows.Forms.Button HighScoreBtn;
         private System.Windows.Forms.Button SettingsBtn;
         private System.Windows.Forms.Button ControlsBtn;
+        private System.Windows.Forms.Timer GameTimer;
     }
 }
 
