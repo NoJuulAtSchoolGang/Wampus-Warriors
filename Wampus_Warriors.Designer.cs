@@ -1,5 +1,5 @@
 ﻿namespace Wampus_Warriors {
-    partial class Form1 {
+    partial class Wampus_Warriors {
         /// <summary>
         /// Required designer variable.
         /// </summary>

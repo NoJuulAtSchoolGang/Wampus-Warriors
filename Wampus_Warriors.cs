@@ -9,8 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Wampus_Warriors {
-    public partial class Form1 : Form {
-        public Form1() {
+    public partial class Wampus_Warriors : Form {
+        public Wampus_Warriors() {
             InitializeComponent();
         }
     }
