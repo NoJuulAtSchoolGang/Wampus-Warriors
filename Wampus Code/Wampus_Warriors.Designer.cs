@@ -41,6 +41,7 @@
             this.Game_Canvas.Size = new System.Drawing.Size(640, 480);
             this.Game_Canvas.TabIndex = 0;
             this.Game_Canvas.TabStop = false;
+            this.Game_Canvas.Paint += new System.Windows.Forms.PaintEventHandler(this.Game_Canvas_Paint);
             // 
             // StartBtn
             // 
@@ -92,6 +93,8 @@
             this.Name = "Wampus_Warriors";
             this.Text = "Wampus Warriors";
             this.SizeChanged += new System.EventHandler(this.Wampus_Warriors_SizeChanged);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Wampus_Warriors_KeyDown);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Wampus_Warriors_KeyUp);
             ((System.ComponentModel.ISupportInitialize)(this.Game_Canvas)).EndInit();
             this.ResumeLayout(false);
 

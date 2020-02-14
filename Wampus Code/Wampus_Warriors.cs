@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using Wampus_Warriors.Wampus_Code;
 
 namespace Wampus_Warriors {
     public partial class Wampus_Warriors : Form {
@@ -80,6 +75,21 @@ namespace Wampus_Warriors {
         //button to start a new game
         private void StartBtn_Click(object sender, EventArgs e) {
             StartGame();
+        }
+
+        //detects if a key is currently being pressed
+        private void Wampus_Warriors_KeyDown(object sender, KeyEventArgs e) {
+            Input.changeState(e.KeyCode, true);
+        }
+
+        //detects when a key is released
+        private void Wampus_Warriors_KeyUp(object sender, KeyEventArgs e) {
+            Input.changeState(e.KeyCode, false);
+        }
+
+        //method used to paint the game canvas
+        private void Game_Canvas_Paint(object sender, PaintEventArgs e) {
+            Graphics g = e.Graphics;
         }
     }
 }

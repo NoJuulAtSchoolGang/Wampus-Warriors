@@ -8,25 +8,21 @@ using System.Threading.Tasks;
 namespace Wampus_Warriors.Wampus_Code {
     class UI {
 
-        //graphics field
-        System.Drawing.Graphics g;
+        /**
+         * These are the methods used for rendering the game objects
+        **/
 
-        //initilizes the graphics to the graphics of the Game_Canvas
-        public UI(Graphics g) {
-            this.g = g;
-        }
+        //public void drawPlayer(Player player, Graphics g) {}
 
-        //public void drawPlayer(Player player) {}
+        //public void drawCave(Cave cave, Graphics g) {}
 
-        //public void drawCave(Cave cave) {}
-
-        //public void drawWampus(Wampus wampus) {}
+        //public void drawWampus(Wampus wampus, Graphics g) {}
 
         //public void showHighScore(List <String> highScores){}
 
         //public void showControls(){}
 
-        //public void showSettings{}
+        //public void showSettings(){}
 
         //public void PlayGame(){}
     }
