@@ -8,7 +8,10 @@ using System.Threading.Tasks;
 namespace Wampus_Warriors.Wampus_Code {
     class UI {
 
+        //graphics field
         System.Drawing.Graphics g;
+
+        //initilizes the graphics to the graphics of the Game_Canvas
         public UI(Graphics g) {
             this.g = g;
         }
