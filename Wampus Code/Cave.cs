@@ -8,5 +8,6 @@ namespace GameLocation
 {
     class Cave
     {
+        //This class is only used to allow the GameLocation class to compile
     }
 }
