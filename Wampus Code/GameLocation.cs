@@ -15,7 +15,7 @@ namespace GameLocation
 {
     class GameLocation
     {
-        Cave theCave;
+        Cave theCave; // Not the actual cave used right now
         private int playerLoc = 0;
         private int wumpusLoc = 0;
         private int batOneLoc = 0;
