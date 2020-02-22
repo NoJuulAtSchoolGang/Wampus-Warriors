@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Wampus_Warriors.Wampus_Code {
     class UI {
@@ -18,12 +19,15 @@ namespace Wampus_Warriors.Wampus_Code {
 
         //public void drawWampus(Wampus wampus, Graphics g) {}
 
-        //public void showHighScore(List <String> highScores){}
+        public void showHighScore(List <String> highScores, Label label){}
 
-        //public void showControls(){}
+        //public void drawShootArrow(Player player){}
 
-        //public void showSettings(){}
+        public void showControls(Label label){
+        }
 
-        //public void PlayGame(){}
+        public void showSettings(Label label){}
+
+        public void PlayGame(){}
     }
 }
