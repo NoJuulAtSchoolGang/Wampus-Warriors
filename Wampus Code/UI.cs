@@ -23,9 +23,9 @@ namespace Wampus_Warriors.Wampus_Code {
 
         public void showHighScore(List <String> highScores, Label label){}
 
-        //checks if the arrow is show and then whether the arrow hit anything
+        //passed if the arrow is show and then whether the arrow hit anything
         //will show arrow animation
-        public void drawShootArrow(Boolean ArrowShot, Boolean ArrowHit){}
+        public void drawShootArrow(Boolean ArrowShot, Boolean ArrowHit, Graphics g){}
 
         //will intilize a label that shows the controls for the game
         public void showControls(Label label){
@@ -33,6 +33,11 @@ namespace Wampus_Warriors.Wampus_Code {
 
         //will get passed a panel that can change the settings of the game
         public void showSettings(Panel settingsPanel){}
+
+        //hints about surroundings
+        public void showHints(String hints) {
+
+        }
 
     }
 }
