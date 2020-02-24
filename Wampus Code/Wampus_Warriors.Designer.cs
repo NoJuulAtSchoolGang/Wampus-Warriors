@@ -38,14 +38,14 @@
             this.Game_Canvas.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Game_Canvas.Location = new System.Drawing.Point(0, 0);
             this.Game_Canvas.Name = "Game_Canvas";
-            this.Game_Canvas.Size = new System.Drawing.Size(640, 480);
+            this.Game_Canvas.Size = new System.Drawing.Size(1920, 1080);
             this.Game_Canvas.TabIndex = 0;
             this.Game_Canvas.TabStop = false;
             this.Game_Canvas.Paint += new System.Windows.Forms.PaintEventHandler(this.Game_Canvas_Paint);
             // 
             // StartBtn
             // 
-            this.StartBtn.Location = new System.Drawing.Point(87, 100);
+            this.StartBtn.Location = new System.Drawing.Point(413, 147);
             this.StartBtn.Name = "StartBtn";
             this.StartBtn.Size = new System.Drawing.Size(97, 34);
             this.StartBtn.TabIndex = 1;
@@ -55,7 +55,7 @@
             // 
             // HighScoreBtn
             // 
-            this.HighScoreBtn.Location = new System.Drawing.Point(472, 100);
+            this.HighScoreBtn.Location = new System.Drawing.Point(1364, 177);
             this.HighScoreBtn.Name = "HighScoreBtn";
             this.HighScoreBtn.Size = new System.Drawing.Size(97, 34);
             this.HighScoreBtn.TabIndex = 2;
@@ -64,7 +64,7 @@
             // 
             // SettingsBtn
             // 
-            this.SettingsBtn.Location = new System.Drawing.Point(78, 307);
+            this.SettingsBtn.Location = new System.Drawing.Point(404, 737);
             this.SettingsBtn.Name = "SettingsBtn";
             this.SettingsBtn.Size = new System.Drawing.Size(106, 35);
             this.SettingsBtn.TabIndex = 3;
@@ -73,7 +73,7 @@
             // 
             // ExitBtn
             // 
-            this.ExitBtn.Location = new System.Drawing.Point(472, 307);
+            this.ExitBtn.Location = new System.Drawing.Point(1354, 737);
             this.ExitBtn.Name = "ExitBtn";
             this.ExitBtn.Size = new System.Drawing.Size(107, 35);
             this.ExitBtn.TabIndex = 4;
@@ -84,7 +84,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(640, 480);
+            this.ClientSize = new System.Drawing.Size(1920, 1080);
             this.Controls.Add(this.ExitBtn);
             this.Controls.Add(this.SettingsBtn);
             this.Controls.Add(this.HighScoreBtn);
