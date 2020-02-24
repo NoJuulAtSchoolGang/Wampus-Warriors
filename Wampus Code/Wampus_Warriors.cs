@@ -63,6 +63,7 @@ namespace Wampus_Warriors {
         private void UpdateScreen(object sender, EventArgs e) {
 
             //this makes the game canvas redraw itself
+            //hello
             Game_Canvas.Invalidate();
         }
 
