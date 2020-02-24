@@ -13,7 +13,7 @@ namespace Wampus_Warriors.Wampus_Code {
          * These are the methods used for rendering the game objects
         **/
 
-        //will draw the player using information from the GameLocation class
+        //will draw the player using information from the player class
         public void drawPlayer(Player player, Graphics g) {}
 
         //will draw the current cave using information from the GameLocation class
@@ -34,7 +34,5 @@ namespace Wampus_Warriors.Wampus_Code {
         //will get passed a panel that can change the settings of the game
         public void showSettings(Panel settingsPanel){}
 
-        //will initilize the arrow to shoot the 
-        public void PlayGame(){}
     }
 }
