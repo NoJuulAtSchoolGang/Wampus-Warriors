@@ -46,8 +46,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Wampus Code\Cave.cs" />
+    <Compile Include="Wampus Code\GameLocation.cs" />
+    <Compile Include="Wampus Code\HighScore.cs" />
     <Compile Include="Wampus Code\Input.cs" />
+    <Compile Include="Wampus Code\Player.cs" />
     <Compile Include="Wampus Code\UI.cs" />
+    <Compile Include="Wampus Code\User.cs" />
     <Compile Include="Wampus Code\Wampus_Warriors.cs">
       <SubType>Form</SubType>
     </Compile>

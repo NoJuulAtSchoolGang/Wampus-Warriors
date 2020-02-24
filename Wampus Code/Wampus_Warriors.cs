@@ -27,10 +27,10 @@ namespace Wampus_Warriors {
             ExitBtn.Size = ButtonLocation;
 
             //sets the location of the buttons relative to each other
-            StartBtn.Location = new Point((int)(this.Location.X + this.ClientSize.Width * 0.25 - ButtonLocation.Width/2), (int)(this.Location.Y + this.Height * 0.25 - ButtonLocation.Height/2));
-            HighScoreBtn.Location = new Point((int)(this.Location.X + this.ClientSize.Width * 0.75 - ButtonLocation.Width/2), (int)(this.Location.Y + this.Height * 0.25 - ButtonLocation.Height/2));
-            SettingsBtn.Location = new Point((int)(this.Location.X + this.ClientSize.Width * 0.25 - ButtonLocation.Width / 2), (int)(this.Location.Y + this.Height * 0.75 - ButtonLocation.Height / 2));
-            ExitBtn.Location = new Point((int)(this.Location.X + this.ClientSize.Width * 0.75 - ButtonLocation.Width / 2), (int)(this.Location.Y + this.Height * 0.75 - ButtonLocation.Height / 2));
+            StartBtn.Location = new Point((int)(Game_Canvas.Location.X + Game_Canvas.Width * 0.25 - ButtonLocation.Width/2), (int)(Game_Canvas.Location.Y + Game_Canvas.Height * 0.25 - ButtonLocation.Height/2));
+            HighScoreBtn.Location = new Point((int)(Game_Canvas.Location.X + Game_Canvas.Width * 0.75 - ButtonLocation.Width/2), (int)(Game_Canvas.Location.Y + Game_Canvas.Height * 0.25 - ButtonLocation.Height/2));
+            SettingsBtn.Location = new Point((int)(Game_Canvas.Location.X + Game_Canvas.ClientSize.Width * 0.25 - ButtonLocation.Width / 2), (int)(Game_Canvas.Location.Y + Game_Canvas.Height * 0.75 - ButtonLocation.Height / 2));
+            ExitBtn.Location = new Point((int)(Game_Canvas.Location.X + Game_Canvas.ClientSize.Width * 0.75 - ButtonLocation.Width / 2), (int)(Game_Canvas.Location.Y + Game_Canvas.Height * 0.75 - ButtonLocation.Height / 2));
         }
 
         //method to start the game
