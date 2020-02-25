@@ -6,6 +6,8 @@ using Wampus_Warriors.Wampus_Code;
 namespace Wampus_Warriors {
     public partial class Wampus_Warriors : Form {
 
+        private bool playGame = false;
+
         //this is the constructor
         public Wampus_Warriors() {
             InitializeComponent();
@@ -55,6 +57,10 @@ namespace Wampus_Warriors {
             //initilizes the frame rate of the game
             GameTimer.Interval = 100;
             GameTimer.Tick += UpdateScreen;
+            GameTimer.Start();
+
+            //bool to indicate game is being played
+            playGame = true;
             
         }
 
@@ -91,6 +97,11 @@ namespace Wampus_Warriors {
         //method used to paint the game canvas
         private void Game_Canvas_Paint(object sender, PaintEventArgs e) {
             Graphics g = e.Graphics;
+            if (playGame) {
+                //init the game canvas
+                //will eventually implement UI classes and use prefab images
+                Game_Canvas.BackColor = Color.SandyBrown;
+            }
         }
     }
 }

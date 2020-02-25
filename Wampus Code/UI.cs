@@ -9,6 +9,10 @@ using System.Windows.Forms;
 namespace Wampus_Warriors.Wampus_Code {
     class UI {
 
+
+        public UI() {
+
+        }
         /**
          * These are the methods used for rendering the game objects
         **/
@@ -19,7 +23,7 @@ namespace Wampus_Warriors.Wampus_Code {
         //will draw the current cave using information from the GameLocation class
         public void drawCave(Cave cave, Graphics g) {}
 
-        //public void drawWampus(boolean wampusInRoom, Graphics g) {}
+        public void drawWampus(bool wampusInRoom, Graphics g) {}
 
         public void showHighScore(List <String> highScores, Label label){}
 
