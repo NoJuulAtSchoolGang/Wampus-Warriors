@@ -51,6 +51,7 @@
     <Compile Include="Wampus Code\HighScore.cs" />
     <Compile Include="Wampus Code\Input.cs" />
     <Compile Include="Wampus Code\Player.cs" />
+    <Compile Include="Wampus Code\Trivia.cs" />
     <Compile Include="Wampus Code\UI.cs" />
     <Compile Include="Wampus Code\User.cs" />
     <Compile Include="Wampus Code\Wampus_Warriors.cs">
