@@ -19,7 +19,24 @@ namespace GameLocation
         private int goldCoins = 0;
         private int turns = 0;
         private int score = 0;
+        private int playerX = 500;
+        private int playerY = 500;
 
+        public void setX(int x) {
+            playerX = x;
+        }
+
+        public void setY(int y) {
+            playerY = y;
+        }
+
+        public int getX() {
+            return playerX;
+        }
+
+        public int getY() {
+            return playerY;
+        }
         public int numberOfArrows()
         {
             // keeps track of the number of arrows the player currently has
