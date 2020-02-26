@@ -64,10 +64,26 @@ namespace Wampus_Warriors {
             
         }
 
+        private void endGame() {
+            GameTimer.Stop();
+            playGame = false;
+
+            StartBtn.Visible = true;
+            StartBtn.Enabled = true;
+
+            ExitBtn.Visible = true;
+            ExitBtn.Enabled = true;
+
+            SettingsBtn.Visible = true;
+            SettingsBtn.Enabled = true;
+
+            HighScoreBtn.Visible = true;
+            HighScoreBtn.Enabled = true;
+        }
+
         //method that changes the state of the game
         //we will be using this a lot
         private void UpdateScreen(object sender, EventArgs e) {
-
             //this makes the game canvas redraw itself
             //hello
             Game_Canvas.Invalidate();
@@ -101,6 +117,10 @@ namespace Wampus_Warriors {
                 //init the game canvas
                 //will eventually implement UI classes and use prefab images
                 Game_Canvas.BackColor = Color.SandyBrown;
+            }
+
+            else {
+                Game_Canvas.BackColor = Color.Black;
             }
         }
     }
