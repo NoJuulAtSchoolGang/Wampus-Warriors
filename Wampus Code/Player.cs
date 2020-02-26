@@ -11,7 +11,7 @@ using System.Threading.Tasks;
  * Period 3
  */
 
-namespace GameLocation
+namespace Wampus_Warriors.Wampus_Code
 {
     class Player
     {
