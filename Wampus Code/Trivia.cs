@@ -10,7 +10,7 @@ namespace Wampus_Warriors.Wampus_Code {
         public Trivia() {
 
         }
-        // instance of corr
+        // instance of correct responses
         private bool verity;
         public bool buyArrows() {
             //reads from file 3 questions, if 2 or more are answered right: return true, else: return false.
