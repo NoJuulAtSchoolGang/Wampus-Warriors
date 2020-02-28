@@ -38,7 +38,7 @@
             this.Game_Canvas.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Game_Canvas.Location = new System.Drawing.Point(0, 0);
             this.Game_Canvas.Name = "Game_Canvas";
-            this.Game_Canvas.Size = new System.Drawing.Size(1920, 1080);
+            this.Game_Canvas.Size = new System.Drawing.Size(1859, 1105);
             this.Game_Canvas.TabIndex = 0;
             this.Game_Canvas.TabStop = false;
             this.Game_Canvas.Paint += new System.Windows.Forms.PaintEventHandler(this.Game_Canvas_Paint);

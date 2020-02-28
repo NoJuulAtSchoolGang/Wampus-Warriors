@@ -13,15 +13,17 @@ namespace Wampus_Warriors.Wampus_Code {
         private Image playerDown;
         private Image playerLeft;
         private Image playerRight;
-        private Size canvas_size;
+        private Size STANDARD_SIZE = new Size(640, 480);
+        private double conversionFactor;
 
-        public UI(Size canvas_size) {
+        public UI(double conversionFactor) {
             playerUp = Image.FromFile("playerUp.jpg");
             playerDown = Image.FromFile("playerDown.jpg");
             playerLeft = Image.FromFile("playerLeft.jpg");
             playerRight = Image.FromFile("playerRight.jpg");
 
-            this.canvas_size = canvas_size;
+            
+            
         }
         /**
          * These are the methods used for rendering the game objects
@@ -36,17 +38,17 @@ namespace Wampus_Warriors.Wampus_Code {
             if (direction.Equals("up")){
                 playerImage = playerUp;
             }
-            if (direction.Equals("down")) {
+            else if (direction.Equals("down")) {
                 playerImage = playerDown;
             }
-            if (direction.Equals("left")) {
+            else if (direction.Equals("left")) {
                 playerImage = playerLeft;
             }
-            if (direction.Equals("right")) {
+            else {
                 playerImage = playerRight;
             }
 
-            Rectangle playerRect = new Rectangle(x, y, this.canvas_size.Width/20, this.canvas_size.Width/20);
+            Rectangle playerRect = new Rectangle(x, y, (int)(this.STANDARD_SIZE.Width/20 * conversionFactor), (int)(this.STANDARD_SIZE.Width/20 * conversionFactor);
 
             g.DrawImage(playerImage, playerRect);
         }
@@ -75,6 +77,10 @@ namespace Wampus_Warriors.Wampus_Code {
         //hints about surroundings
         public void showHints(String hints) {
 
+        }
+
+        private void updateConversionFactor(double conversionFactor) {
+            this.conversionFactor = conversionFactor;
         }
 
     }

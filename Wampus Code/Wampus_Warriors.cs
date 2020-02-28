@@ -7,6 +7,8 @@ namespace Wampus_Warriors {
     public partial class Wampus_Warriors : Form {
 
         private bool playGame = false;
+        private double scaleFactor = 1;
+        private readonly Size STANDARD_SIZE = new Size(640, 480);
 
         //this is the constructor
         public Wampus_Warriors() {
@@ -14,10 +16,32 @@ namespace Wampus_Warriors {
             startScreenSetUp();
         }
 
+        //method to return the preferred size of the game canvas
+        private Size getSize() {
+            double conversion_factor;
+            if (ClientSize.Width / (double)STANDARD_SIZE.Width <= ClientSize.Height / (double)STANDARD_SIZE.Height) {
+                conversion_factor = (ClientSize.Width / (double)STANDARD_SIZE.Width);
+            }
+            else {
+                conversion_factor = (ClientSize.Height / (double)STANDARD_SIZE.Height);
+            }
+
+
+            this.scaleFactor = conversion_factor;
+
+            return new Size((int)(STANDARD_SIZE.Width * conversion_factor),(int)(STANDARD_SIZE.Height * conversion_factor));
+
+        }
         //sets up the the start screen buttons relative to the screen size
         public void startScreenSetUp() {
             //sets the size of the game canvas to the size of the form that the game is on
-            Game_Canvas.Size = this.ClientSize;
+            Game_Canvas.Size = getSize();
+
+            //sets Game canvas to center of the screen
+            int x = (this.ClientSize.Width - Game_Canvas.Width) / 2;
+            int y = (this.ClientSize.Height - Game_Canvas.Height) / 2;
+
+            Game_Canvas.Location = new Point(x, y);
 
             //dictates the size of the buttons
             Size ButtonLocation = new Size(Game_Canvas.Width / 8, Game_Canvas.Height / 5);
@@ -92,6 +116,7 @@ namespace Wampus_Warriors {
 
         //this is called everytime the user changes the size of the game
         private void Wampus_Warriors_SizeChanged(Object sender, EventArgs e) {
+            Console.WriteLine();
             startScreenSetUp();
         }
 
