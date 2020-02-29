@@ -6,6 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing;
+using System.IO;
+
 namespace Wampus_Warriors.Wampus_Code {
     class UI {
 
@@ -17,10 +19,19 @@ namespace Wampus_Warriors.Wampus_Code {
         private double conversionFactor;
 
         public UI(double conversionFactor) {
-            playerUp = Image.FromFile("playerUp.jpg");
-            playerDown = Image.FromFile("playerDown.jpg");
-            playerLeft = Image.FromFile("playerLeft.jpg");
-            playerRight = Image.FromFile("playerRight.jpg");
+
+            this.conversionFactor = conversionFactor;
+            try {
+                playerUp = Image.FromFile(@"C:\Users\Jason\OneDrive - Lake Washington School District\AP Computer Science\Wampus Warriors\Images\playerUp.png");
+                playerDown = Image.FromFile(@"C:\Users\Jason\OneDrive - Lake Washington School District\AP Computer Science\Wampus Warriors\Images\playerDown.png");
+                playerLeft = Image.FromFile(@"C:\Users\Jason\OneDrive - Lake Washington School District\AP Computer Science\Wampus Warriors\Images\playerLeft.png");
+                playerRight = Image.FromFile(@"C:\Users\Jason\OneDrive - Lake Washington School District\AP Computer Science\Wampus Warriors\Images\playerRight.png"); 
+            }
+            catch(Exception e) {
+                Console.WriteLine(e.StackTrace);
+
+            }
+            
 
             
             
@@ -48,8 +59,7 @@ namespace Wampus_Warriors.Wampus_Code {
                 playerImage = playerRight;
             }
 
-            Rectangle playerRect = new Rectangle(x, y, (int)(this.STANDARD_SIZE.Width/20 * conversionFactor), (int)(this.STANDARD_SIZE.Width/20 * conversionFactor);
-
+            Rectangle playerRect = new Rectangle(x, y, (int)(playerImage.Width/20 * conversionFactor), (int)(playerImage.Height/5 * conversionFactor));
             g.DrawImage(playerImage, playerRect);
         }
 
@@ -71,15 +81,12 @@ namespace Wampus_Warriors.Wampus_Code {
         public void showControls(Label label){
         }
 
-        //will get passed a panel that can change the settings of the game
-        public void showSettings(Panel settingsPanel){}
-
         //hints about surroundings
-        public void showHints(String hints) {
+        public void showHints(String hints, Label lbl) {
 
         }
 
-        private void updateConversionFactor(double conversionFactor) {
+        public void updateConversionFactor(double conversionFactor) {
             this.conversionFactor = conversionFactor;
         }
 

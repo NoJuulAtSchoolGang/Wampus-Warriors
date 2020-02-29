@@ -8,7 +8,16 @@ namespace Wampus_Warriors {
 
         private bool playGame = false;
         private double scaleFactor = 1;
-        private readonly Size STANDARD_SIZE = new Size(640, 480);
+        private static readonly Size STANDARD_SIZE = new Size(640, 480);
+        private String direction = "up";
+
+        //creates game objects
+        private UI ui;
+        private GameLocation game_location;
+        private Player player;
+        private Trivia trivia;
+        private HighScore hs;
+        private Cave cave;
 
         //this is the constructor
         public Wampus_Warriors() {
@@ -79,12 +88,20 @@ namespace Wampus_Warriors {
             this.Focus();
 
             //initilizes the frame rate of the game
-            GameTimer.Interval = 100;
+            GameTimer.Interval = 5;
             GameTimer.Tick += UpdateScreen;
             GameTimer.Start();
 
             //bool to indicate game is being played
             playGame = true;
+
+            //initializes the game objects
+            ui = new UI(scaleFactor);
+            cave = new Cave();
+            game_location = new GameLocation(cave);
+            hs = new HighScore();
+            trivia = new Trivia();
+            player = new Player();
             
         }
 
@@ -108,22 +125,58 @@ namespace Wampus_Warriors {
         //method that changes the state of the game
         //we will be using this a lot
         private void UpdateScreen(object sender, EventArgs e) {
+            movePlayer();
+            
             //this makes the game canvas redraw itself
             //hello
             Game_Canvas.Invalidate();
         }
 
+        //method moves player around on screen
+        //will add collision detection in the future
+        private void movePlayer() {
+            if (Input.keyPressed(Keys.W)) {
+                player.setY(player.getY() - (int)(scaleFactor * 5));
+                direction = "up";
+            }
+
+            if (Input.keyPressed(Keys.S)) {
+                player.setY(player.getY() + (int)(scaleFactor * 5));
+                direction = "down";
+
+            }
+
+            if (Input.keyPressed(Keys.A)) {
+                player.setX(player.getX() - (int)(scaleFactor * 5));
+                if (!Input.keyPressed(Keys.W) && !Input.keyPressed(Keys.S)) {
+                    direction = "right";
+                }
+
+            }
+            if (Input.keyPressed(Keys.D)) {
+                player.setX(player.getX() + (int)(scaleFactor * 5));
+                if (!Input.keyPressed(Keys.W) && !Input.keyPressed(Keys.S)) {
+                    direction = "left";
+                }
+            }
+        }
 
         //this is called everytime the user changes the size of the game
         private void Wampus_Warriors_SizeChanged(Object sender, EventArgs e) {
             Console.WriteLine();
             startScreenSetUp();
+            if (playGame) {
+                ui.updateConversionFactor(this.scaleFactor);
+            }
         }
 
         //button to start a new game
         private void StartBtn_Click(object sender, EventArgs e) {
             StartGame();
         }
+
+        //button to end game
+
 
         //detects if a key is currently being pressed
         private void Wampus_Warriors_KeyDown(object sender, KeyEventArgs e) {
@@ -142,11 +195,16 @@ namespace Wampus_Warriors {
                 //init the game canvas
                 //will eventually implement UI classes and use prefab images
                 Game_Canvas.BackColor = Color.SandyBrown;
+                ui.drawPlayer(player, direction, g);
             }
 
             else {
                 Game_Canvas.BackColor = Color.Black;
             }
+        }
+
+        private void ExitBtn_Click(object sender, EventArgs e) {
+            this.Close();
         }
     }
 }

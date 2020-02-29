@@ -31,6 +31,10 @@ namespace Wampus_Warriors.Wampus_Code {
 
         }
 
+        public void showHighScore() {
+
+        }
+
 
     }
 }

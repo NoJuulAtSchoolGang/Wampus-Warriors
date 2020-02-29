@@ -79,6 +79,7 @@
             this.ExitBtn.TabIndex = 4;
             this.ExitBtn.Text = "Exit Game";
             this.ExitBtn.UseVisualStyleBackColor = true;
+            this.ExitBtn.Click += new System.EventHandler(this.ExitBtn_Click);
             // 
             // Wampus_Warriors
             // 

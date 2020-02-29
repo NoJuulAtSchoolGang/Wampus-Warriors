@@ -19,8 +19,8 @@ namespace Wampus_Warriors.Wampus_Code
         private int goldCoins = 0;
         private int turns = 0;
         private int score = 0;
-        private int playerX = 500;
-        private int playerY = 500;
+        private int playerX = 0;
+        private int playerY = 0;
 
         public void setX(int x) {
             playerX = x;
