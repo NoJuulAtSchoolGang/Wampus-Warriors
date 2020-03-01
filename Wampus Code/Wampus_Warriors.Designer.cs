@@ -30,6 +30,7 @@
             this.SettingsBtn = new System.Windows.Forms.Button();
             this.ExitBtn = new System.Windows.Forms.Button();
             this.GameTimer = new System.Windows.Forms.Timer(this.components);
+            this.hs_label = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Game_Canvas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -81,11 +82,21 @@
             this.ExitBtn.UseVisualStyleBackColor = true;
             this.ExitBtn.Click += new System.EventHandler(this.ExitBtn_Click);
             // 
+            // hs_label
+            // 
+            this.hs_label.Font = new System.Drawing.Font("Arial Rounded MT Bold", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hs_label.Location = new System.Drawing.Point(1124, 520);
+            this.hs_label.Name = "hs_label";
+            this.hs_label.Size = new System.Drawing.Size(10, 10);
+            this.hs_label.TabIndex = 5;
+            this.hs_label.Visible = false;
+            // 
             // Wampus_Warriors
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.Controls.Add(this.hs_label);
             this.Controls.Add(this.ExitBtn);
             this.Controls.Add(this.SettingsBtn);
             this.Controls.Add(this.HighScoreBtn);
@@ -109,6 +120,7 @@
         private System.Windows.Forms.Button SettingsBtn;
         private System.Windows.Forms.Button ExitBtn;
         private System.Windows.Forms.Timer GameTimer;
+        private System.Windows.Forms.Label hs_label;
     }
 }
 
