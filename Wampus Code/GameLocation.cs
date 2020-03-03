@@ -11,7 +11,10 @@ using System.Threading.Tasks;
  * Period 3
  */
 
-namespace Wampus_Warriors.Wampus_Code {
+namespace Wampus_Warriors.Wampus_Code
+{
+    
+
     class GameLocation
     {
         Cave theCave; // Not the actual cave used right now
@@ -38,12 +41,20 @@ namespace Wampus_Warriors.Wampus_Code {
 
         public bool hasPitInRoom()
         {
+            if (playerLoc == pitOneLoc || playerLoc == pitTwoLoc)
+            {
+                return true;
+            }
             // checks if playerLoc = pitLoc 1 or 2
             return false;
         }
 
         public bool hasWumpusInRoom()
         {
+            if (playerLoc == wumpusLoc)
+            {
+                return true;
+            }
             // checks if playerLoc = wumpusLoc
             return false;
         }
@@ -67,19 +78,42 @@ namespace Wampus_Warriors.Wampus_Code {
             return playerLoc;
         }
 
-        public int getBatLoc()
+        public int GetBatLoc()
         {
+            Random random = new Random();
             // this is for the secret
             // assign each bat 0 or 1 and use a random generator to
             // see which bat location is the secret
             // assign a variable revealedBatLocation to the bat chosen
-            return 0;
+            int batOneSecret = 0;
+            int batTwoSecret = 1;
+            int secretRevealedBat = random.Next(0, 1);
+            if (secretRevealedBat == batOneSecret)
+            {
+                return batOneLoc;
+            }
+            else
+            {
+                return batTwoLoc;
+            }
+
         }
 
         public int getPitLoc()
         {
-            // same as getBatLoc but for pits
-            return 0;
+            // same as GetBatLoc but for pits
+            Random random = new Random();
+            int pitOneSecret = 0;
+            int pitTwoSecret = 1;
+            int secretRevealedPit = random.Next(0, 1);
+            if (secretRevealedPit == pitOneSecret)
+            {
+                return pitOneLoc;
+            }
+            else
+            {
+                return pitTwoLoc;
+            }
         }
 
         public bool shootWumpus(int roomNumber)
